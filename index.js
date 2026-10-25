@@ -675,17 +675,23 @@ app.get("/api/products", async (req, res) => {
       },
     };
 
-    if (req.query.search) {
-      const rx = new RegExp(
-        req.query.search,
-        "i"
-      );
+    
+if (req.query.search) {
+  const searchText = String(req.query.search)
+    .trim()
+    .slice(0, 100)
+    .replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 
-      query.$or = [
-        { title: rx },
-        { category: rx },
-      ];
-    }
+  if (searchText) {
+    const rx = new RegExp(searchText, "i");
+
+    query.$or = [
+      { title: rx },
+      { category: rx },
+    ];
+  }
+}
+
 
     if (req.query.category) {
       query.category = req.query.category;
