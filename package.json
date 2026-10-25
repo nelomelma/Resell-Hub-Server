@@ -1,1 +1,22 @@
-{"name":"resell-hub-server","version":"1.0.0","type":"module","scripts":{"start":"node index.js","dev":"node --watch index.js","seed":"node seed.js"},"dependencies":{"bcryptjs":"latest","cors":"latest","dotenv":"latest","express":"latest","google-auth-library":"^11.3.1","jsonwebtoken":"latest","mongodb":"latest","stripe":"latest"}}
+
+{
+  "name": "resell-hub-server",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js",
+    "seed": "node seed.js",
+    "test:health": "node scripts/check-health.js"
+  },
+  "dependencies": {
+    "bcryptjs": "latest",
+    "cors": "latest",
+    "dotenv": "latest",
+    "express": "latest",
+    "google-auth-library": "^11.3.1",
+    "jsonwebtoken": "latest",
+    "mongodb": "latest",
+    "stripe": "latest"
+  }
+}
