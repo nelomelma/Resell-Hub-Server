@@ -46,3 +46,34 @@ Never commit actual `.env` files, passwords, API keys, or secret tokens.
 ## Frontend
 
 ReSell Hub React application. GitHub repository link will be added after creation.
+
+## API Endpoints
+
+| Method | Endpoint | Description |
+|---|---|---|
+| GET | `/api/health` | Check API health |
+| GET | `/api/products` | Get product listings |
+| GET | `/api/products/:id` | Get a product by ID |
+| GET | `/api/products/:id/reviews` | Get product reviews |
+| GET | `/api/marketplace/categories` | Get marketplace categories |
+| GET | `/api/marketplace/stats` | Get marketplace statistics |
+| GET | `/api/marketplace/trusted-sellers` | Get trusted sellers |
+| GET | `/api/marketplace/success-stories` | Get success stories |
+
+### API Testing
+
+Start the server:
+
+`npm start`
+
+Health check:
+
+`http://localhost:5000/api/health`
+
+Products endpoint:
+
+`http://localhost:5000/api/products`
+
+The products endpoint returns product data and pagination
+information, including the current page, total pages,
+and total product count.
