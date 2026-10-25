@@ -77,3 +77,32 @@ Products endpoint:
 The products endpoint returns product data and pagination
 information, including the current page, total pages,
 and total product count.
+
+
+## Backend Verification
+
+Before deploying the backend, run:
+
+```bash
+npm run verify
+```
+
+This command performs two checks:
+
+1. **Syntax validation:** Checks `index.js` for JavaScript syntax errors.
+2. **Health check:** Sends a request to `/api/health` to confirm the backend is responding.
+
+The backend must be running before the health check is executed.
+
+You can also run the checks separately:
+
+```bash
+npm run check
+npm run test:health
+```
+
+A successful health check displays:
+
+```text
+PASS: ReSell Hub backend is healthy
+```
