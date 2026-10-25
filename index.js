@@ -664,10 +664,15 @@ app.get("/api/products", async (req, res) => {
       Number(req.query.page) || 1
     );
 
-    const limit = Math.min(
-      50,
-      Number(req.query.limit) || 12
-    );
+    
+const limit = Math.max(
+  1,
+  Math.min(
+    50,
+    Math.floor(Number(req.query.limit) || 12)
+  )
+);
+
 
     const query = {
       moderationStatus: {
