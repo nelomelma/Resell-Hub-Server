@@ -25,6 +25,12 @@ ReSell Hub provides a marketplace where buyers can purchase second-hand products
 - Payment history
 - Seller sales analytics
 
+## Live Backend URL
+https://resell-hub-server-iaxe.onrender.com
+
+## Live Frontend URL
+https://resell-hub-client-tan.vercel.app
+
 ## Local Setup
 
 1. Install dependencies:
@@ -45,7 +51,11 @@ Never commit actual `.env` files, passwords, API keys, or secret tokens.
 
 ## Frontend
 
-ReSell Hub React application. GitHub repository link will be added after creation.
+ReSell Hub is a full-stack second-hand marketplace platform
+built with React, Node.js, Express.js, and MongoDB.
+
+Client Repository:
+https://github.com/nelomelma/Resell-Hub-Client
 
 ## API Endpoints
 
@@ -78,6 +88,16 @@ The products endpoint returns product data and pagination
 information, including the current page, total pages,
 and total product count.
 
+## NPM Packages Used
+
+- express
+- mongodb
+- cors
+- dotenv
+- bcryptjs
+- jsonwebtoken
+- stripe
+- google-auth-library
 
 ## Backend Verification
 
